@@ -1,0 +1,5 @@
+memory overlap:
+restrect!!
+cmnd : ar rcs
+compilation steps:
+little ending || big ending 
