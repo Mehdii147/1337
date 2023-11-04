@@ -1,3 +1,7 @@
+
+git hub :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
+
+
 memory overlap:
 restrect!!
 cmnd : ar rcs
