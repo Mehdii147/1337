@@ -6,15 +6,15 @@
 /*   By: ehafiane <ehafiane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 14:48:10 by ehafiane          #+#    #+#             */
-/*   Updated: 2023/11/03 13:10:17 by ehafiane         ###   ########.fr       */
+/*   Updated: 2023/11/09 16:50:08 by ehafiane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-	if(c >= 48 && c <= 57)
+	if (c >= 48 && c <= 57)
 		return (1);
 	return (0);
 }
