@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ehafiane <ehafiane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/03 14:53:35 by ehafiane          #+#    #+#             */
-/*   Updated: 2023/11/16 13:39:10 by ehafiane         ###   ########.fr       */
+/*   Created: 2023/11/14 18:28:09 by ehafiane          #+#    #+#             */
+/*   Updated: 2023/11/14 18:50:22 by ehafiane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	char	*str; 
-	char	*ptsrc;
-	size_t	i;
+	t_list	*tmp;
 
-	ptsrc = (char *)src;
-	str = (char *)dst;
-	i = 0;
-	if (src == dst)
-		return (0);
-	while (i < n)
+	if (lst)
 	{
-		str[i] = ptsrc[i];
-		i++;
+		while (*lst)
+		{
+			tmp = (*lst)->next;
+			ft_lstdelone(*lst, del);
+			(*lst) = tmp;
+		}
 	}
-	return (dst);
 }

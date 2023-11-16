@@ -6,7 +6,7 @@
 /*   By: ehafiane <ehafiane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 14:35:02 by ehafiane          #+#    #+#             */
-/*   Updated: 2023/11/09 16:54:06 by ehafiane         ###   ########.fr       */
+/*   Updated: 2023/11/16 13:41:08 by ehafiane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		while (len-- > 0)
 			d[len] = s[len];
 	else 
-	{
-		while (i < len)
-		{
-			d[i] = s[i];
-			i++;
-		}
-	}
+		ft_memcpy(dst, src, len);
 	return (dst);
 }
